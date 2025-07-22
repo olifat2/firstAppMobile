@@ -1,5 +1,6 @@
 import 'package:first_app/controllers/theme_controller.dart';
 import 'package:first_app/utils/app_themes.dart';
+import 'package:first_app/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppThemes.dark,
       themeMode: themeController.theme,
       defaultTransition: Transition.fade,
+      home: const SplashScreen(),
     );
   }
 }
