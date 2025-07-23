@@ -6,6 +6,8 @@ import 'package:first_app/view/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'forgot_password_screen.dart';
+
 class SigninScreen extends StatelessWidget {
   SigninScreen({super.key});
 
@@ -15,8 +17,6 @@ class SigninScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-
-
 
     return Scaffold(
       body: SafeArea(
@@ -100,12 +100,13 @@ class SigninScreen extends StatelessWidget {
                   onPressed: _handleSignIn,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Theme.of(context).primaryColor,
-                    padding: EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     )
                   ),
-                  child: Text('Sign in',
+                  child: Text(
+                    'Sign in',
                     style: AppTextStyle.withColor(
                       AppTextStyle.buttonMedium,
                       Colors.white,
