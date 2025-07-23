@@ -81,7 +81,7 @@ class SigninScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: (){},
+                  onPressed: () => Get.to(() => ForgotPasswordScreen()),
                   child: Text(
                     'Forgot Password',
                     style: AppTextStyle.withColor(
@@ -128,7 +128,13 @@ class SigninScreen extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () => Get.to(() => SignUpScreen(),),
-                    child: Text('Sign Up'),
+                    child: Text(
+                      'Sign Up',
+                      style: AppTextStyle.withColor(
+                        AppTextStyle.buttonMedium,
+                        Theme.of(context).primaryColor,
+                      ),
+                    ),
                   )
                 ],
               )
