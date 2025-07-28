@@ -33,6 +33,6 @@ class AuthController extends GetxController{
 
   void logout(){
     _isLoggedIn.value = false;
-    _storage.write('key', false);
+    _storage.write('isLoggedIn', false);
   }
 }
