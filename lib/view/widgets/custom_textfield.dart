@@ -18,7 +18,7 @@ class CustomTextfield extends StatefulWidget {
     this.isPassword = false,
     this.controller,
     this.validator,
-    this.onChanged
+    this.onChanged,
   });
 
   @override
@@ -50,77 +50,45 @@ class _CustomTextfieldState extends State<CustomTextfield> {
         ),
         prefixIcon: Icon(
           widget.prefixIcon,
-          color: isDark? Colors.grey[400] : Colors.grey[600],
+          color: isDark ? Colors.grey[400] : Colors.grey[600],
         ),
         suffixIcon: widget.isPassword
-          ?
-            IconButton(
-              onPressed: (){
-                setState(() {
-                  _obscureText = !_obscureText;
-                });
-              },
-              icon: Icon(
-                _obscureText ? Icons.visibility_off : Icons.visibility,
-              ),
-            )
-          : null,
+            ? IconButton(
+                onPressed: () {
+                  setState(() {
+                    _obscureText = !_obscureText;
+                  });
+                },
+                icon: Icon(
+                  _obscureText ? Icons.visibility_off : Icons.visibility,
+                ),
+              )
+            : null,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(
             color: isDark ? Colors.grey[700]! : Colors.grey[300]!,
-          )
+          ),
         ),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide(
-              color: isDark ? Colors.grey[700]! : Colors.grey[300]!,
-            )
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(
+            color: isDark ? Colors.grey[700]! : Colors.grey[300]!,
+          ),
         ),
         focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide(
-              color: Theme.of(context).primaryColor,
-            )
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Theme.of(context).primaryColor),
         ),
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.error,
-            )
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Theme.of(context).colorScheme.error),
         ),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.error,
-            )
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Theme.of(context).colorScheme.error),
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

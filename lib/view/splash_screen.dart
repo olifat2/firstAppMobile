@@ -28,14 +28,12 @@ class SplashScreen extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Theme.of(context).primaryColor,
-                Theme.of(context).primaryColor.withOpacity(0.8),
-                Theme.of(context).primaryColor.withOpacity(0.6),
-              ]
-
-
+            end: Alignment.bottomRight,
+            colors: [
+              Theme.of(context).primaryColor,
+              Theme.of(context).primaryColor.withOpacity(0.8),
+              Theme.of(context).primaryColor.withOpacity(0.6),
+            ]
           ),
         ),
         child: Stack(
@@ -198,7 +196,7 @@ class GridPainter extends CustomPainter{
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDeletate) => false;
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
 

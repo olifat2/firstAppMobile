@@ -1,5 +1,4 @@
 import 'package:first_app/utils/app_textstyles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SaleBanner extends StatelessWidget {
